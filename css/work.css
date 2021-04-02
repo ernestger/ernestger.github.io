@@ -1,0 +1,150 @@
+.work-impact{
+    opacity: 0;/*блок будет скрыт, уровень прозрачности от 0 до 1*/
+    z-index: -1;/*скрыть блок,уровень наложения блоков, какой блок(div) будет выше*/
+    transition: all .5s;
+}
+.work-second{
+    background: url("../img/img1.jpg")center no-repeat; /*center- позиционирование картинки по двум осям, no-repeat не повторяем картинку*/
+    background-size: cover;/*растянуть картинку с соблюдением пропорций*/
+}
+.work-third{
+    background: url("../img/img2.jpg")center no-repeat; /*center- позиционирование картинки по двум осям, no-repeat не повторяем картинку*/
+    background-size: cover;/*растянуть картинку с соблюдением пропорций*/
+}
+.work-forth{
+    background: url("../img/img3.jpg")center no-repeat; /*center- позиционирование картинки по двум осям, no-repeat не повторяем картинку*/
+    background-size: cover;/*растянуть картинку с соблюдением пропорций*/
+}
+.work-fifth{
+    background: url("../img/img4.jpg")center no-repeat; /*center- позиционирование картинки по двум осям, no-repeat не повторяем картинку*/
+    background-size: cover;/*растянуть картинку с соблюдением пропорций*/
+}
+.work-six{
+    background: url("../img/img5.jpg")center no-repeat; /*center- позиционирование картинки по двум осям, no-repeat не повторяем картинку*/
+    background-size: cover;/*растянуть картинку с соблюдением пропорций*/
+}
+.works{
+    background: #202020;
+    padding-top: 80px;
+    padding-bottom: 160px;
+}
+.work-list{
+    display: grid;/*чтобы сделать грид*/
+    grid-template-columns: repeat(12,minmax(60px,auto));
+    grid-auto-rows: minmax(270px,auto);/*чтобы все строки подгонялось автоматически*/
+}
+.work-first{
+    grid-column: span 3;/*количество колонок смотрим в фотошопе при помощи просмотр->вспомаг элементы*/
+    max-width: 270px;/*чтобы текст не растягивался по всей ширине*/
+}
+.work-second{
+    grid-column: span 6;
+}
+.work-third{
+    grid-column: span 3;
+}
+.work-forth{
+    grid-column: span 3;
+}
+.work-fifth{
+    grid-column: span 5;
+}
+.work-six{
+    grid-column: span 4;
+}
+.work-element{
+    position: relative;/*чтобы когда показывать темный блок плашки, чтобы не ултел этот блок*/
+}
+.work-element:hover .work-impact{/*для того чтобы показать блок*/
+    opacity: 1;
+    z-index: 2;/*2 потому что у плашки идет z index 1 приоритет и position:absolute*/
+}
+.work-first-title{
+    font-size: 30px;
+    color: #fff;
+    position:relative;/*если делаем палку, то прописываем это свойство*/
+    text-transform: uppercase;/*заглавные буквы*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.work-first-description{
+    font-size: 14px;
+    color: #464646;
+}
+.work-first-title:after{/*делаем палку над текстом*/
+    content: "";/*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position:absolute;/*чтобы палка находилась в воздухе относительно страницы*/
+    left: 0;/*поджимаем палку вверх*/
+    top: -15px;/*поджимаем палку к верхней части слова*/
+    display: block;/*вырисовывуем линию*/
+    width: 70px;/*ширина палки*/
+    height: 2px;/*высота палки*/
+    background-color: #2f2f2f;/*заливка палки*/
+}
+.work-impact-title{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    position: relative;
+    z-index: 2;/*z index без position:relative не работает*/
+    text-transform: uppercase;/*заглавные буквы*/
+}
+.work-impact-text{
+    font-size: 12px;
+    color: #959595;
+}
+.work-impact{
+    border: 5px solid #e5493a;/*толщина,цвет полоски в рамке*/
+    position: relative;
+    padding: 0 25px 25px 80px;/*внутренний отступ сверху, справа, снизу, слева по часовой стрелке*/
+    width: 100%;/*чтобы плашка полупрозрачная заняла всю ширину блока*/
+    height: 100%;/*чтобы плашка полупрозрачная заняла всю высоту блока*/
+    box-sizing: border-box;/*чтобы pading не влияли на ширину и высоту, не выдавливая рамку*/
+}
+.work-btn{
+    position: absolute;/*так как у родителя стоит relative*/
+    right: 30px;/*справа поджимаем кнопку*/
+    bottom: 30px;/*снизу поджимаем кнопку*/
+    display: flex;/*чтобы иконки были на одной линии*/
+    align-items: center;/*чтобы были в одной плоскости по горизонтальной оси*/
+}
+.work-zoom{/*копка с лупой*/
+    margin-right: 10px;
+    width: 42px;/*создаем круг*/
+    height: 42px;/*создаем круг*/
+    background-color: #252525; /*создаем круг*/
+    border-radius: 100%;/*создаем круг*/
+    display: inline-flex;/*чтобы применяить фоновую заливку к width и height*/
+    align-items: center;/*картинки по средине по оси Y*/
+    justify-content: center;/*картинки по средине по оси X*/
+}
+.work-link{/*красная кнопка с линком*/
+    width: 42px;/*создаем круг*/
+    height: 42px;/*создаем круг*/
+    background-color: #e5493a; /*создаем круг*/
+    border-radius: 100%;/*создаем круг*/
+    display: inline-flex;/*чтобы применяить фоновую заливку к width и height*/
+    align-items: center;/*картинки по средине по оси Y*/
+    justify-content: center;/*картинки по средине по оси X*/
+}
+.work-element:after{/*делаем плашку*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(17,17,17,0.85);/*red green blue,и степень непрозрачности*/
+    opacity: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+.work-element:hover:after{
+    z-index: 1;
+    opacity: 1;
+}
+.work-element:first-child:after{/*обращаемся к первому дочернему жлементу*/
+    display:none;/*убрали плашку для первого жлемента*/
+}
+

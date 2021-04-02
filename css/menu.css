@@ -1,0 +1,26 @@
+nav{
+    width: 47%;/*чтобы посчитать %: ширина пунктов меню 500px *100%  / ширина всей секции 1500px=47%*/
+}
+.menu li a{/*чтобы обратиться к a */
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 6.3px;/*в фотошопе берем va расстояние между буквами 350*font size/1000=6.3*/
+}
+.menu li:last-child{
+    margin-right: 0;
+}
+.menu li{
+    margin-right: 10px;
+}
+.menu .active a{/*чтобы выделить mens красным*/
+    color: red;
+}
+.menu li a:hover {
+    color: red;
+    transition-duration: 0.5s;
+}
+.menu{
+    flex-wrap: wrap;/*включает режим переноса,чтобы блоки когда будут сталкиваться смещались вниз*/
+}

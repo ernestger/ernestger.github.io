@@ -1,0 +1,37 @@
+.footer{
+    display: flex;/*чтобы легко было выровнять контент*/
+    justify-content: space-between;/*чтобы распределить вправо и влево*/
+    padding: 65px 25px 65px 25px;/*боковые отступы ставим по 0, так как есть wrapper*/
+    align-items: center;/*чтобы пункты меню и иконки справа были четко по оси по середине*/
+    flex-wrap: wrap;/*чтобы меню переносились в медиазапросе при мобильном режиме автоматически*/
+}
+.footer-left-link{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*чтобы смещались пункты меню в медиазапросе при мобильной версии*/
+}
+.footer-left-link li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-size: 18px;
+    transition-property: color, border-bottom;
+    font-weight: 600;
+    font-family: "Proxima Nova", sans-serif;
+}
+.footer-left-link li:not(:first-child){/*применить команду кроме первого элемента*/
+    margin-left: 70px;/*отступы между пунктами меню*/
+}
+.footer-right-link:not(:first-child){
+    margin-left: 40px;
+}
+.footer-left-link li a:hover{
+    color: #e5493a; /*сменил только цвет пунктов меню*/
+    transition-duration: 0.5s;
+}
+
+
+
+
+
+

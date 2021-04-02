@@ -1,0 +1,71 @@
+.shop{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,460px));/*кол-во колонок = 3 и сколько будут занимать места*/
+    grid-gap: 60px;/*отступ между столбцами и рядами*/
+    margin-top: 80px;/*отступ к верхн секции*/
+    margin-bottom: 85px;/*отступ к нижн секции*/
+}
+.shop-block{
+    grid-column: span 1;/*по обеим рядам и столбцам наш блок будет занимать одну колонку*/
+    display: flex;/*делаем флекс элементом гибким, чтобы применить свойтва*/
+    flex-direction: column;/*разворачиваем ось*/
+    justify-content: flex-end;/*чтобы поджать к низу/растянуть флекс элементы*/
+    padding: 100px 110px 40px 40px;
+    box-sizing: border-box;/*чтобы падинги не влияли на ширину блока, а только на контент*/
+    background-size: cover;
+    position: relative;/*чтобы создать затемнение позже через before/after*/
+}
+.shop-block:after{/*делаем тень*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 90deg, rgb(26,26,26) 0%, rgba(26,26,26,0) 100%);
+    z-index: -1;/*чтобы сразу сверху контент не попадал в тень*/
+}
+.shop-block:nth-child(1){
+    background: url("../img/layer22.png") no-repeat;
+    grid-column: 1/3;/*с первой по 3ю колнку занимает первый большой блок*/
+    grid-row: 1/3;/*с первой по 3ю строку занимает первый большой блок*/
+    padding-top: 450px;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block:nth-child(2){
+    background: url("../img/layer21.png") no-repeat;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block:nth-child(3){
+    background: url("../img/layer25.png") no-repeat;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block:nth-child(4){
+    background: url("../img/layer31.png") no-repeat;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block:nth-child(5){
+    background: url("../img/layer29.png") no-repeat;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block:nth-child(6){
+    background: url("../img/layer27.png") no-repeat;
+    background-size: cover;/*чтобы вся картинка растягивалась в пропорциональном отношении*/
+}
+.shop-block img{/*обращаемся к картинкам, а картинки это не блочные и не линейные элементы, а картинки линейно-блочные*/
+    margin-bottom: 30px;
+    align-self: flex-start;/*отрабатывает когда у родителя стоит flex-direction:column, выравнивание блока вокруг поперечной оси*/
+}
+.shop-title{
+    letter-spacing: 24px;/*посмотреть в фотошопе меджубукв интервал 400 * font size 60/ 1000=24px*/
+    line-height: 70px;/*в фотошопе при нажатии на меню для шрифта длинна букв под regular*/
+    font-size: 60px;
+    color: #f4f4f4;
+    transition-duration: 0.5s;
+    transition-property: color;/*анимаирует только цвет, но надо прописать задерку transition-duration 0.5s*/
+    /*transition:all 5s;!*анимирует все свойства, которые мы перечисляем в hover*!*/
+}
+.shop-title:hover{
+    color: #ff0000;
+}
+

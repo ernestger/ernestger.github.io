@@ -1,0 +1,24 @@
+.wrapper{
+    max-width: 1530px;
+    margin:0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+:root {
+    --color-black: #000;
+    --color-white:#fff;
+}
+body{
+    font-family: "Proxima Nova", sans-serif;/*подключаем шрифт из папки fonts*/
+    font-weight: 400;/*из папки fonts подключает шрифт*/
+}
+main{
+    background-color: #fff;
+    max-width: 1500px;
+    padding: 0 15px;
+    margin: 0 auto;/*чтобы блок был по середине*/
+}
+
+
+
+

@@ -1,0 +1,78 @@
+.header-title{
+    color:#fff;
+    font-size: 80px;
+    text-transform: uppercase;/*заглавные буквы*/
+    padding-top: 260px;/*отступ внутренний*/
+    margin-bottom: 5px;/*отступ физический от smart business*/
+
+}
+.business{
+    max-width: 600px;/*чтобы текст не растягивался*/
+    margin-left: auto;/*по левому краю, чтобы текст перенести вправо*/
+}
+.moves {
+    background-size: cover; /*чтобы картинка хорошо растянулась*/
+    background: url("../img/bg-man.jpg") center top no-repeat; /*располагаем картинку по центру и поджимаем к верху, чтоб не повторялось к другим картинкам*/
+    padding-bottom: 270px;/*внутренний отступ вниз до конца картинки*/
+}
+.header-title {
+    font-size: 60px;
+    line-height: 80px;/*междустрочечный интервал, его ставим если фотошопе он есть при проверке текста, возле галочки*/
+}
+.business-title{
+    font-size:43px;
+    color:#fff;
+    margin-top: -5px;/*убрали отступ сверху*/
+}
+.business-title span{
+    color:#e5493a;
+}
+.header-text{
+    font-size:18px;
+    color:#555;
+    margin-bottom:35px;/*внешний нижний отступ к кнопкам ниже*/
+}
+.moved-link{
+    display:inline-block;/*создаем кнопку линейно-блочную*/
+    border-radius: 5px; /*в фотошопе Alt+правая кн мышки*/
+    background-color: rgb(229, 73, 58); /*в фотошопе Alt+правая кн мышки+ копировать в CSS*/
+    width: 170px;/*в фотошопе Alt+правая кн мышки*/
+    height: 54px;/*в фотошопе Alt+правая кн мышки*/
+    text-align: center;/*текст по середине*/
+    font-size: 14px;
+    color: #fff;
+    padding-top:15px;/*чтобы текст в кнопке опустился вниз*/
+    box-sizing: border-box;/*чтобы падинг не влиял*/
+    text-transform: uppercase;/*заглавные буквы*/
+    margin-right:30px;/*внешний отступ справа от первой кнопки ко второй*/
+    font-weight: bolder;/*жирный текст*/
+    transition: all 0.5s;/*отработка анимации 0.5 секунд  кнопки внутри hover*/
+}
+.live-link{
+    display:inline-block;
+    border-style: solid; /*в фотошопе Alt+правая кн мышки+ копировать в CSS*/
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgba(229, 73, 58, 0);
+    width: 174px;
+    height: 58px;
+    font-size: 14px;
+    color: #fff;
+    padding-top:15px;/*чтобы текст в кнопке опустился вниз*/
+    text-transform: uppercase;/*заглавные буквы*/
+    text-align: center;/*текст по середине*/
+    top: 5px;
+    font-weight: bolder;/*жирный текст*/
+    transition: all 0.5s;/*отработка анимации 0.5 секунд кнопки внутри hover*/
+}
+.live-link:hover{/*ховер -псевдокласс устанавл анимаццию к элементу*/
+    border-color:#e5493a;
+}
+.moved-link:hover{
+    background-color: #fff;
+    color: #ff0000;
+}
+
+
+

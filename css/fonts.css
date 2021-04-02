@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff");
+    font-style: normal;
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaLight/ProximaNovaLight.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaLight/ProximaNovaLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaLight/ProximaNovaLight.woff") format("woff");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaMedium/ProximaNovaMedium.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaMedium/ProximaNovaMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaMedium/ProximaNovaMedium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova/ProximaNovaSemibold/ProximaNovaSemibold.eot");
+    src: url("../fonts/ProximaNova/ProximaNovaSemibold/ProximaNovaSemibold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNova/ProximaNovaSemibold/ProximaNovaSemibold.woff") format("woff");
+    font-style: normal;
+    font-weight: 600;
+}

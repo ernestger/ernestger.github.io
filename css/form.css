@@ -1,0 +1,59 @@
+.form input{
+    display: block;/*чтобы каждый input шел с новой строки*/
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 60px;
+    padding: 30px 10px 30px 30px;/*справа 10px чтобы при введении текст вместился*/
+    outline: none;/*чтобы убрать рамку для chrome*/
+    border: none;/*чтобы убрать рамку для других браузеров*/
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Raleway, sans-serif;
+    color: #fff;
+    background-color: #202020;
+    transition-duration: 0.5s;
+}
+textarea{/*обращаемся без точки, так как это тег, а если класс,то с точкой*/
+    display: block;/*чтобы каждый input шел с новой строки*/
+    width: 100%;
+    margin-bottom: 30px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px 10px 10px 30px;/*справа 10px чтобы при введении текст вместился*/
+    outline: none;/*чтобы убрать рамку для chrome*/
+    border: none;/*чтобы убрать рамку для других браузеров*/
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Raleway, sans-serif;
+    color: #fff;
+    background-color: #202020;
+    resize: none;/*чтобы убрать величину рамки при помощи мыши*/
+    transition-duration: 0.5s;
+}
+input::placeholder{/*к input всегда применяется opacity*/
+    opacity: 1;
+}
+textarea::placeholder { /*к input всегда применяется opacity*/
+     opacity: 1;
+ }
+input:focus{
+    box-shadow: 0 0 10px rgba(255,255,255,.5);/*тени для рамки*/
+}
+textarea:focus{
+    box-shadow: 0 0 10px rgba(255,255,255,.5);/*тени для рамки*/
+}
+.form .submit{
+    width: 100%;/*чтобы тянулась на всю ширину*/
+    height: 60px;
+    padding: 10px;
+    background-color: #e5493a;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;/*курсор указатель*/
+}
+.contact-right iframe{
+    max-height: 445px;
+}
+

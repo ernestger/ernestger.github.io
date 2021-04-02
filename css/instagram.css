@@ -1,0 +1,50 @@
+.instagram{
+    position: relative;/*чтобы ниже ставился absolute*/
+}
+.instagram-wrap{
+    display: grid;/*добавляем сетку*/
+    grid-template-columns: repeat(4,1fr);/*сколько блоков в ряду=4 и размер каждого блока =1fr*/
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+.instagram-info{
+    position: absolute;
+    text-align: center;
+    width: 100%;/*обязательно прописать*/
+    top: 50%;/*отступ сверху если absolute*/
+    left: 50%;
+    transform: translate(-50%,-50%);/*чтобы текст выровнялся по середине обеих осей x и y*/
+    z-index: 2;/*ставим на 1 пиксель больше, чем заливка z-index в .instagram-link::after*/
+}
+.hashtag{
+    color: red;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 700;/*bold*/
+    font-size: 30px;
+    letter-spacing: 12px;/*400 в photoshop *30font size/100=12px*/
+}
+.instagram-title{
+    font-size: 60px;
+    font-family: "Proxima Nova", sans-serif;/*подключаем стили шрифта если он есть в папке с fonts*/
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 36px;/*60*600/1000=36 px*/
+    font-weight: 400;
+ }
+.instagram-link{
+    position: relative;
+}
+.instagram-link::after{
+    content: "";
+    position:absolute;/*чтобы фон был висящим относительно других блоков*/
+    left: 0;
+    top: 0;
+    display: block;/*чтобы сделать заливку*/
+    width: 100%;/*ширина фона*/
+    height: 100%;/*высота фона*/
+    background-color: rgba(26, 26, 26, 0.5);/*делаем прозрачность заливки (в фотошопе найти сло alt+прав кн, копировать css)*/
+    z-index: 1;
+}
+
+
+

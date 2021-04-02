@@ -1,0 +1,103 @@
+.skills{
+    background-color: #e5493a;
+}
+.skills .wrapper{
+    padding: 110px 0 80px 0;
+    display: flex;/*чтобы сделать левую в левой колнке, праввую в правой*/
+    justify-content: space-between;/*чтобы сделать левую в левой колнке, праввую в правой*/
+    flex-wrap: wrap;/*режим многоколоночного переноса:чтобы перенеслась колонка при мобильной разработке когда мы дадим по 100% колонкам*/
+}
+.skills-left{
+    flex-basis: 265px;/*чтобы указать ширину левой колонки, если прописан flex выше, вместо width*/
+    margin-right: 135px;
+}
+.skills-right{
+    flex-grow: 1;/*чтобы отработала левая колонка, так как правая часть пустая на данный момент*/
+}
+.skills-left-title{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;/*при палке через after/before указываем обязательно*/
+}
+.skills-left-title:after { /*делаем палку над текстом*/
+    content: ""; /*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position: absolute; /*чтобы палка находилась в воздухе относительно страницы*/
+    left: 0; /*поджимаем палку вверх*/
+    top: -15px; /*поджимаем палку к верхней части слова*/
+    display: block; /*вырисовывуем линию*/
+    width: 70px; /*ширина палки*/
+    height: 2px; /*высота палки*/
+    background-color: #fff; /*заливка палки*/
+}
+.skills-left-description{
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.services-button{
+    font-size: 14px;
+    font-weight: 800;/*extra bold*/
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #252525;
+    align-items: center;/*тескт по середине*/
+    justify-content: center;/*тескт по середине*/
+    display: flex;/*чтобы применились все свойства для кнопки*/
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;/*чтобы закругленные углы,в photoshop выбор слоя + alt, прав кн мыши-> копировать css*/
+    margin-bottom: 80px;
+}
+.services-button:hover{
+    background-color: #1916d5;/*изменить цвет кнопки при наведении*/
+    transition-duration: 0.5s;
+}
+.skills-progress{
+    margin: 25px 0;
+}
+.progress-name{
+    font-weight: 700;/*bold*/
+    font-family: "Raleway", sans-serif;/*указать стиль текста, если в html подключены fonts*/
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.skills-element{
+    border: 1px solid rgba(255, 255, 255, 0.25);/*в photoshop в палитре цветов возле цвета посмотреть на буквы r g b a и вписать значение в скобках и уровень прозрачности в слоях=25%=0.25*/
+    border-radius: 3px;
+    padding: 2px;
+}
+.skills-line{
+    width: 0;
+    background-color: #fff;
+    height: 4px;
+    position: relative;/*так как родитель абсолют отностельно 95 цифры*/
+}
+.skills-tooltip{/*делаем прямоугольник черный, без маленкого треуголька*/
+    position: absolute;
+    top: -32px;
+    right: -15px;/*от края белой полосы*/
+    width: 31px;
+    height: 20px;
+    background-color: #252525;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 3px;
+    line-height: 18px;/*междустрочечный интервал, чтоб текст был ниже либо выше в прямоугольник*/
+    display: none;/*скрыть*/
+}
+.skills-tooltip:after{/*делаем треугольник*/
+    content: "";
+    border: 4px solid transparent;
+    position: absolute;/*чтобы не выдавливать центрирование текста, если убрать, то текст сдвинется*/
+    border-top: 4px solid #252525;
+    bottom: -7px;/*чтобы опустить треугольник при position: absolute*/
+    left: 50%;/*чтобы сделать треугольник по середине*/
+    transform: translateX(-50%);/*чтобы сделать треугольник по середине*/
+}

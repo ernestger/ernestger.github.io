@@ -1,0 +1,21 @@
+.container{
+    max-width:1024px;
+    margin:0 auto;
+    padding:50px 20px;
+    box-sizing:border-box;/*чтобы внутренние отступы не влияли на ширину*/
+}
+.grid__element{
+    background-color:#f00;
+    color:#fff;
+    padding:20px;
+    border-radius: 20px;
+    text-align:center;
+    border:1px solid #000; /*рамка*/
+}
+.grid{
+    display:grid;
+    /*grid-template-columns: 150px 1fr 2fr 150px; /*количество колонок в сетке, фракция fr растягивается на доступную ширину, а боковые на заданную*/
+    /*grid-template-columns: 150px min-content max-content 150px;/*контент уменьшает при min-content, при max-content растягивается*/
+    grid-template-columns:150px minmax(100px, 1fr) minmax(200px, 300px) 150px;
+    grid-template-rows: minmax(100px,1fr) 150px 200px;
+}

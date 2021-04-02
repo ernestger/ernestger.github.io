@@ -1,0 +1,58 @@
+.header {
+   background: url("../img/header-bg.jpg") center no-repeat;/*путь к каринке,center позиционирование по оси y и x, если будет мало ширины, а картинка будет большая, чтоб придержив середины, при помощи repeat картинка не будет повторяться и заполнять место пустое*/
+   background-size: cover;/*чтоб картинку растягивало, если будет маленькая*/
+}
+.header-wrap{
+   padding-top: 45px;
+}
+.header-wrap{
+   display: flex;
+   justify-content: space-between;/*чтобы разместить по бокамсекции*/
+   align-items: center;
+}
+.header-wrap .menu{
+   display: flex;
+   justify-content: space-between;/*чтобы разместить по бокам секции*/
+   align-items: center;
+}
+.header-title-one{
+   font-size: 60px;
+   color: #fff;
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 160px;
+   font-weight: 300;
+   letter-spacing: 21px; /*в фотошопе берем va расстояние между буквами 350*font size/1000=21*/
+   margin-bottom: 50px;
+}
+.header-bottom p{
+   text-align: center;
+   margin-top: 55px;
+   font-weight: 700;
+   letter-spacing: 10.5px; /*в фотошопе берем va расстояние между буквами 350*font size/1000=10.5*/
+}
+.header-bottom p a{
+   font-size: 30px;
+   color: #f84545;
+   text-transform: uppercase;
+}
+.header-bottom p a:hover{
+  letter-spacing: 15px;/*междустрочечный интервал, чтобы буквы растягивались при наведении*/
+   transition-duration: 0.5s;
+}
+.header-bottom{
+   margin-bottom: 270px;/*отступ до стрелки вниз*/
+}
+.arrow{/*чтобы выровнять ссылку(значок стрелки) по центру. ссылка элемент линейный и поэтому нельзя дать отступ margin*/
+   width: 84px;/*даем ширину чтобы картинка не улетела, так как это блочный элемент*/
+   height:42px;
+   display: block;
+   margin: 0 auto;
+   padding-bottom: 65px;
+   animation-name: animateArrow;/*применяем анимацию для стрелки*/
+   animation-iteration-count: infinite;/*чтобы анимация бесконечно прокручивалась*/
+   animation-duration: 1s/*за какое время должна быть выполнена анимация*/
+}
+.header{
+   padding: 0 0 50px 0;
+}

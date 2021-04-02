@@ -1,0 +1,69 @@
+.happy-clients{
+    background-color: #202020;
+    position: relative;
+    padding-bottom: 140px;
+}
+.happy-clients .wrapper{
+    padding-top: 110px;/*отступ сверху от wrapper*/
+}
+.clients-title{
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+.clients-title:before {
+    content: ""; /*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position: absolute; /*чтобы палка находилась в воздухе относительно страницы*/
+    left: 50%; /*поджимаем палку ввлево, чтобы была ровная середина*/
+    transform: translateX(-50%); /*чтобы палка была ровно по оси x*/
+    display: block; /*вырисовывуем линию*/
+    width: 70px; /*ширина палки*/
+    height: 2px; /*высота палки*/
+    background-color: #2f2f2f; /*заливка палки*/
+    top: -30px; /*при display absolute, свойтство margin-top bottom не отрабатывает*/
+}
+.clients-description{
+    font-size: 14px;
+    max-width: 560px;/*в фотошопе померять ширину текста, чтобы он не занимал всю ширину*/
+    color: #464646;
+    display: block;/*выравниваю текст относительно контейнера(wrapper) при помощи display: block и margin: 0 auto;, чтобы выровнять по ценру*/
+    margin: 0 auto;/*выравниваю текст относительно контейнера(wrapper) при помощи display: block и margin: 0 auto;, чтобы выровнять по ценру*/
+    padding-bottom: 110px;
+    text-align: center;/*выравниваю по центру относительно max-width*/
+}
+.happy-clients .wrapper{
+    overflow: hidden;
+}
+.owl-item{/*оборачивает картинку в дополнительный div, класса нет, это для js*/
+    width: 20% !important;/*каждая картинка будет занимать 20% ширины, а important это приоритет*/
+}
+.owl-stage{/*только в js*/
+    position: relative;/*чтобы относительно родителя разместить влео-вправо*/
+    display: flex;
+    align-items: center;
+}
+.carousel{
+    position: relative;/*чтобы иконки принадлежали к этому родителю*/
+    padding-left: 110px;/*отступ слева кнопок прокрутки*/
+    padding-right: 110px;
+    box-sizing: border-box;/*чтобы падинги не растягивали wrapper,не растягивали блок*/
+}
+.carousel-item img{/*обращаемся к картинкам и меняем их свойства чтобы выровнять равномерно и сделать прозрачными*/
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0.3;
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
+.owl-stage-outer{/*генерируется js автоматически*/
+    overflow: hidden;/*чтобы скрыть лишние элементы*/
+}
+.carousel-item img:hover{/*при наведении*/
+    opacity: 1;
+}

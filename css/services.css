@@ -1,0 +1,53 @@
+.services{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(210px,auto));/*располагаем гридом в 4 колонки, задаем мин.ширина и макс. ширину*/
+    grid-column-gap: 30px;/*отступ между колонок*/
+    padding-top: 75px;/*внутренний отступ*/
+    padding-bottom: 110px;
+}
+.images{
+    width: 100px;/*создаем круг*/
+    height: 100px;/*создаем круг*/
+    border: 1px solid #363636; /*создаем круг*/
+    border-radius: 100%;/*создаем круг*/
+    display: flex;
+    align-items: center;/*картинки по средине по оси Y*/
+    justify-content: center;/*картинки по средине по оси X*/
+    margin-bottom: 30px;/*отступ внешний от картинок до текста*/
+    transition: all .5s;
+}
+.design-title{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #636363;
+    margin-bottom: 20px;/*внешний отступ до текста ниже*/
+    transition: all .5s;
+}
+.clean {
+    font-size: 14px;
+    color: #3e3e3e;
+    transition: all .5s;
+}
+.design::after{
+    content:"";/*в качестве контента ничего не предаем*/
+    display: block;
+    position: relative;/*чтобы отработал bottom*/
+    bottom: -30px;/*нижняя линия от текста до линии подчеркивания*/
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #e5493a;
+}
+.design:hover .images{/*анимация на общий блок и на круги*/
+    border-color: #e5493a;/*только рамку круга подсвечивать*/
+}
+.design:hover .design-title{
+    color: #e5493a;
+}
+.design:hover .clean{
+    color: #fff;
+}
+.design:hover .images{
+    filter: contrast(200%);/*функция которая придает разл. эффекты картинкам*/
+}

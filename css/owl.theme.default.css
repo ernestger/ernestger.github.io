@@ -1,0 +1,26 @@
+.owl-prev, .owl-next{
+  position: absolute;
+  width: 30px;/*меряем в фотошопе*/
+  height: 30px;/*меряем в фотошопе*/
+  background: url("../img/arrow-sprite.png") no-repeat;
+  top: 50%;
+  transform:translateY(-50%);/*опустить на половину ширины*/
+  margin: 0;
+  border: none;/*убрать рамки кнопок стрелочных*/
+  cursor: pointer;/*курсор*/
+}
+.owl-prev{
+   left: 0;/*поджали при position absolute*/
+}
+.owl-next{
+   right: 0;
+  background-position: 0 -30px;/*четыре иконки стрелки в кнопке выбираю через пиксели*/
+}
+.owl-prev:hover {
+  background-position: -30px 0px;/*изменить цвет кнопки при наведении, в инспекторе передвинуть*/
+}
+.owl-next:hover{
+  background-position: -30px -30px;/*изменить цвет кнопки при наведении, в инспекторе передвинуть*/
+}
+
+

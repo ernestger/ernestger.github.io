@@ -1,0 +1,126 @@
+.blog-list {
+    display: grid;/*делаем сетку гридами*/
+    grid-template-columns: repeat(12, 1fr);/*12 колонок посчитать в фотошопе, 1 фракция*/
+    grid-template-rows: repeat(5, minmax(130px,auto));/*5 блоков поэтому 5,мы берем высоту последних блоков - 260 пикселов и делим на 2, получаем 130., а макс авто потому что мы для каждого блока и так будем указывать ширину далее*/
+}
+.blog-element:nth-child(1){/*оращаемся к первому дочернему элементу, 1 скобках это первый элемент*/
+    background:url("../img/img6.jpg") center no-repeat;/*вставляем фоновую картинку, по середине, не повторялась*/
+    grid-column: span 8;/*8 колонок в сетке в фотошопе занимает по ширине первый блок*/
+    background-size: cover;/*чтобы картинка растягивалась внутри блока автоматически*/
+    grid-row: 1/4;/*размер, который будет занимать ячейки с 1й по 4ю*/
+}
+.blog-element:nth-child(2){
+    grid-column: span 4;/*4 колонок в сетке в фотошопе занимает по ширине первый блок*/
+    grid-row: 1/3;
+}
+.blog-element:nth-child(3){
+    background:url("../img/img7.jpg") center no-repeat;/*вставляем фоновую картинку, по середине, не повторялась*/
+    grid-column: span 5;/*5 колонки в сетке в фотошопе занимает по ширине первый блок*/
+    background-size: cover;/*чтобы картинка растягивалась внутри блока автоматически*/
+    grid-row: 4/6;
+}
+.blog-element:nth-child(4){
+    background:url("../img/img8.jpg") center no-repeat;/*вставляем фоновую картинку, по середине, не повторялась*/
+    grid-column: span 3;/*3 колонки в сетке в фотошопе занимает по ширине первый блок*/
+    background-size: cover;/*чтобы картинка растягивалась внутри блока автоматически*/
+    grid-row: 4/6;
+}
+.blog-element:nth-child(5){
+    background:url("../img/img9.jpg") center no-repeat;/*вставляем фоновую картинку, по середине, не повторялась*/
+    grid-column: span 4;/*4 колонки в сетке в фотошопе занимает по ширине первый блок*/
+    background-size: cover;/*чтобы картинка растягивалась внутри блока автоматически*/
+    grid-row: 3/6;
+}
+.info{
+    padding: 20px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;/*направляем текст сверху вниз*/
+    justify-content: space-between;
+    height: 100%;/*чтобы все нижние блоки максимально растянулись*/
+    border: 5px solid transparent;/*делаем рамку*/
+    transition-duration: 0.5s;
+    z-index: 2;/*чтобы было видно тескт на фоне градиента/затемнение, не работает без position relative*/
+    position: relative;
+}
+.blog-title{
+    display: block;/*чтобы блочный элемент растяшивал ссылку на 100%*/
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;/*междустрочечный интервал между тескстом*/
+    margin-bottom: 20px;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.blog-svg{
+    display: block;/*чтобы ссылку сделать блочной и заливать цветом и тд*/
+    width: 41px;
+    height: 41px;
+    position: relative;/*чтобы абсолютом позиционировать svg иконку*/
+    background-color: #000;
+    transition-duration: 0.5s;/*прописывается для статики, не для ховера*/
+}
+.blog-svg svg{
+    width: 21px;
+    height: 21px;/*так как ссылка длинная*/
+    fill: #fff;/*чтобы иконки svg поменяли цвет*/
+    position: absolute;/*так как relative картинка svg*/
+    top: 50%;/*по середине*/
+    left: 50%;/*по середине*/
+    transform: translate(-50%,-50%);/*чтобы по оси x и y подогнать по середине иконку*/
+    transition-duration: 0.5s;
+}
+.blog-element:hover .blog-svg svg{/*указываем что мы хотим сделать ховером, заливка будет производиться в момент наведения на блок*/
+    fill: red;
+}
+.blog-element:hover .blog-svg{
+    background-color: blue;
+}
+.blog-element:hover .info{
+    border-color: red;
+}
+.blog-description{
+    font-size: 12px;
+    color: #7c7c7c;
+    text-transform: uppercase;
+}
+.blog-description span{
+    color: #fff;
+}
+.blog-description:after{/*делаем палку без position relative/absolute*/
+    content: "";/*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    margin-top: 30px;/*отступ сверхуа*/
+    transform: translateY(-50%);/*чтобы палка была ровно по оси y относительно тегов li*/
+    display: block;/*вырисовывуем линию, прямоугольник*/
+    width: 70px;/*ширина палки*/
+    height: 2px;/*высота палки*/
+    background-color: #e5493a;/*заливка палки*/
+}
+.blog-impact-text{
+    padding: 30px 20px 50px 20px;
+}
+.blog-element:nth-child(2) .blog-title{/*чтобы изменить заголовок конкретного тега li*/
+    padding: 30px 170px 30px 20px;
+}
+.blog-element:nth-child(2) .blog-title:before { /*делаем палку без position relative/absolute*/
+    content: ""; /*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    margin-bottom: 30px; /*отступ сверху*/
+    transform: translateY(-50%); /*чтобы палка была ровно по оси y относительно тегов li*/
+    display: block; /*вырисовывуем линию, прямоугольник*/
+    width: 70px; /*ширина палки*/
+    height: 2px; /*высота палки*/
+    background-color: #2f2f2f; /*заливка палки*/
+}
+.blog-element{
+    position: relative;
+}
+.blog-element:before{
+    content: ""; /*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;/*поджимаем к левому краю*/
+    bottom: 0;/*поджимаем к низу*/
+    background: linear-gradient(to bottom,rgba(17, 17, 17, 0) 0%, rgba(37, 37, 37, 0.5) 50%, #252525 100%);/*задаем градиент, to bottom-снизу вверх, rgba- указываю цвет,  0.5- opacity это 50% из раздела гралиент в фотошопе*/
+    z-index: 1;
+}

@@ -1,0 +1,71 @@
+.design-responsive{
+    background-color: #252525;
+}
+.design-responsive .wrapper{
+    background:url("../img/bg-two.png") left bottom no-repeat;/*чтобы вставить картинку фоновую*/
+    background-size: cover;/*растянуть картинку на всю шир и высоту*/
+    padding: 90px 0 100px 0;
+}
+.ready{
+    max-width: 360px;/*померять в фотошопе ширину блока*/
+    margin-left: auto;/*чтобы блок ушел в левую часть*/
+}
+.ready-title{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;/*при палке через after/before указываем обязательно*/
+}
+.ready-title:after{/*делаем палку над текстом*/
+    content: "";/*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position:absolute;/*чтобы палка находилась в воздухе относительно страницы*/
+    left: 0;/*поджимаем палку вверх*/
+    top: -15px;/*поджимаем палку к верхней части слова*/
+    display: block;/*вырисовывуем линию*/
+    width: 70px;/*ширина палки*/
+    height: 2px;/*высота палки*/
+    background-color: #2f2f2f;/*заливка палки*/
+}
+.ready-description{
+    font-size: 14px;
+    color: #464646;
+}
+.ready-menu {
+    font-size: 14px;
+    color: #959595;
+    padding: 30px 0 55px 0;
+}
+.ready-link{
+    margin-bottom: 25px;/*расстояние между li*/
+    padding-left: 50px;/*чтобы li ушли вправо*/
+    position: relative;/*при палке через after/before указываем обязательно*/
+}
+.ready-link:after{/*делаем палку*/
+    content: "";/*если мы работаем с after или before мы должны прописать content и можем оставить пустым*/
+    position:absolute;/*чтобы палка находилась в воздухе относительно страницы*/
+    left: 30px;/*поджимаем палку ввлево от тегов li*/
+    top: 50%;/*поджимаем палку от верха*/
+    transform: translateY(-50%);/*чтобы палка была ровно по оси y относительно тегов li*/
+    display: block;/*вырисовывуем линию*/
+    width: 8px;/*ширина палки*/
+    height: 2px;/*высота палки*/
+    background-color: #e5493a;/*заливка палки*/
+}
+.buy-button{
+    font-size: 14px;
+    font-weight: 800;/*extra bold*/
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #8dc63f;
+    align-items: center;/*тескт по середине*/
+    justify-content: center;/*тескт по середине*/
+    display: flex;/*чтобы применились все свойства для кнопки*/
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;/*чтобы закругленные углы,в photoshop выбор слоя + alt, прав кн мыши-> копировать css*/
+}
+.buy-button:hover{
+    background-color: #e5493a;/*изменить цвет кнопки при наведении*/
+    transition-duration: 0.5s;
+}

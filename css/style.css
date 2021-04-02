@@ -1,0 +1,10 @@
+@import url("reset.css");
+@import url("core.css");
+@import url("header.css");
+@import url("menu.css");
+@import url("footer.css");
+@import url("moves.css");
+@import url("animateArrow.css");
+@import url("shop.css");
+@import url("instagram.css");
+@import url("media.css");/*всегда подключается с самого низу медиа*/
